@@ -6,13 +6,22 @@
 /*   By: hsamira <hsamira@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 13:17:26 by hsamira           #+#    #+#             */
-/*   Updated: 2026/01/26 17:25:26 by hsamira          ###   ########.fr       */
+/*   Updated: 2026/01/27 15:00:45 by hsamira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // _contacts[_index].setFirstName(input):j’envoie input à la fonction
 //setFirstName du contact numéro _index.
 
+/*
+Méthodes principales :
+
+addContact(): demande les infos, remplit un contact, gère l’index
+
+displayListContacts(): affiche la liste formatée (index, prénom, nom, nickname)
+
+displayContact(int index): affiche un contact en détail
+*/
 #include "PhoneBook.class.hpp"
 
 PhoneBook::PhoneBook() : _index(0)
@@ -36,10 +45,10 @@ void PhoneBook::addContact()
     
     while (input.empty())
     {
-        std::cout << "Name :";
+        std::cout << "Last Name :";
         std::getline(std::cin, input);
     }
-    _contacts[_index].setName(input);
+    _contacts[_index].setLastName(input);
     input.clear();
     
      while (input.empty())
@@ -88,7 +97,7 @@ void PhoneBook::displayListContacts() const
             value = value.substr(0, 9) + ".";
         std::cout << std::setw(10) << value << "|";
         
-        value = _contacts[i].getName();
+        value = _contacts[i].getLastName();
         if(value.length() > 10)
             value = value.substr(0, 9) + ".";
         std::cout << std::setw(10) << value << "|";
@@ -114,8 +123,8 @@ void PhoneBook::displayContact(int index) const
         return;
     }
     std::cout << "First name: " << contact.getFirstName() << std::endl;
-    std::cout << "Name: " << contact.getName() << std::endl;
+    std::cout << "Last Name: " << contact.getLastName() << std::endl;
     std::cout << "Nickname: " << contact.getNickName() << std::endl;
-    std::cout << "Phonenumber: " << contact.getPhoneNumber() << std::endl;
-    std::cout << "DarkestSecret: " << contact.getDarkestSecret() << std::endl;
+    std::cout << "Phone number: " << contact.getPhoneNumber() << std::endl;
+    std::cout << "Darkest Secret: " << contact.getDarkestSecret() << std::endl;
 }

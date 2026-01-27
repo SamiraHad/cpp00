@@ -6,7 +6,7 @@
 #    By: hsamira <hsamira@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/18 13:17:22 by hsamira           #+#    #+#              #
-#    Updated: 2026/01/22 16:17:04 by hsamira          ###   ########.fr        #
+#    Updated: 2026/01/27 12:09:29 by hsamira          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ CXX		= g++
 CXXFLAG	= -Wall -Wextra -Werror -std=c++98
 
 SRC		= Contact.class.cpp \
-		PhoneBook.class.cpp
+		PhoneBook.class.cpp \
+		main.cpp
 			
 OBJ		= $(SRC:.cpp=.o)
 

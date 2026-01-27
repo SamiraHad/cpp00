@@ -6,7 +6,7 @@
 /*   By: hsamira <hsamira@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 13:17:12 by hsamira           #+#    #+#             */
-/*   Updated: 2026/01/26 16:03:50 by hsamira          ###   ########.fr       */
+/*   Updated: 2026/01/27 14:50:48 by hsamira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Contact::Contact()
 {
     _firstName = "";
-    _name = "";
+    _lastName = "";
     _nickName = "";
     _phoneNumber = "";
     _darkestSecret = ""; 
@@ -29,8 +29,8 @@ void Contact::setFirstName(const std::string& firstName) {
     this->_firstName = firstName ;
 }
 
-void Contact::setName(const std::string& name) {
-    this->_name = name;
+void Contact::setLastName(const std::string& lastName) {
+    this->_lastName = lastName;
 }
 
 void Contact::setNickName(const std::string& nickName) {
@@ -48,8 +48,8 @@ void Contact::setDarkestSecret(const std::string& darkestSecret) {
 std::string Contact::getFirstName()const {
     return this-> _firstName;
 }
-std::string Contact::getName()const {
-    return this-> _name;
+std::string Contact::getLastName()const {
+    return this-> _lastName;
 }
 std::string Contact::getNickName()const{
     return this-> _nickName;

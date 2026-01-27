@@ -6,7 +6,7 @@
 /*   By: hsamira <hsamira@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 13:17:36 by hsamira           #+#    #+#             */
-/*   Updated: 2026/01/26 17:28:56 by hsamira          ###   ########.fr       */
+/*   Updated: 2026/01/27 12:50:38 by hsamira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <cstdlib>
 #include "Contact.class.hpp"
 
 class PhoneBook
