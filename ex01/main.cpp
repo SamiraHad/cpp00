@@ -6,7 +6,7 @@
 /*   By: hsamira <hsamira@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 15:46:03 by hsamira           #+#    #+#             */
-/*   Updated: 2026/01/27 14:38:38 by hsamira          ###   ########.fr       */
+/*   Updated: 2026/01/30 10:08:02 by hsamira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main ()
         std::cout << "Enter command: ";
         std::getline(std::cin, input);
         if(input == "ADD"  || input == "add")
-         phoneBook.addContact();
+            phoneBook.addContact();
         else if(input == "SEARCH" || input == "search")
         {
             phoneBook.displayListContacts();
@@ -37,6 +37,8 @@ int main ()
             break;
         else
            std::cout << "Please enter a valid command: " << std::endl; 
+        if (std::cin.eof())
+            return 1;
     }
     return(0);
 }

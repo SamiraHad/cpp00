@@ -6,7 +6,7 @@
 /*   By: hsamira <hsamira@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 13:17:26 by hsamira           #+#    #+#             */
-/*   Updated: 2026/01/27 15:00:45 by hsamira          ###   ########.fr       */
+/*   Updated: 2026/01/30 10:10:36 by hsamira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void PhoneBook::addContact()
     {
         std::cout << "First Name: ";
         std::getline(std::cin, input);
+        if (std::cin.eof()) return;
     }
     _contacts[_index].setFirstName(input);
     input.clear();
@@ -47,6 +48,7 @@ void PhoneBook::addContact()
     {
         std::cout << "Last Name :";
         std::getline(std::cin, input);
+        if (std::cin.eof()) return;
     }
     _contacts[_index].setLastName(input);
     input.clear();
@@ -55,6 +57,7 @@ void PhoneBook::addContact()
     {
         std::cout << "Nick Name: ";
         std::getline(std::cin, input);
+        if (std::cin.eof()) return;
     }
     _contacts[_index].setNickName(input);
     input.clear();
@@ -63,6 +66,7 @@ void PhoneBook::addContact()
     {
         std::cout << "Phone Number: ";
         std::getline(std::cin, input);
+        if (std::cin.eof()) return;
     }
     _contacts[_index].setPhoneNumber(input);
     input.clear();
@@ -71,9 +75,11 @@ void PhoneBook::addContact()
     {
         std::cout << "Darkest Secret: ";
         std::getline(std::cin, input);
+        if (std::cin.eof()) return;
     }
     _contacts[_index].setDarkestSecret(input);
     input.clear();
+
 
     _index++;
     if(_index == 8)
